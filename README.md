@@ -5,16 +5,19 @@ Description:
     This project subscribes to these events and saves them in a MongoDB database 'TrotRace'.
 
 Installation:
+
     Use following npm command to install.
         npm install
 
 Usage:
+
     This project expects following env varibales to be paased -
-        DB_HOST
-        DB_PORT
-        API_URL
-        AUTH_EMAIL
+        DB_HOST,
+        DB_PORT,
+        API_URL,
+        AUTH_EMAIL,
         AUTH_PASSWORD
+        
     A sample sample.env is provided along with project
 
     Start the project using following cmd -
