@@ -1,17 +1,37 @@
 {
-  "name": "trotraceconsumer",
+  "name": "trotracedatacollector",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node main.js",
-    "start": "node main.js"
+    "dev": "node src/main.js",
+    "test": "node dist/main.js",
+    "start": "npm run build && npm run test",
+    "transpile": "babel ./src --out-dir dist",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run transpile"
+
   },
   "author": "Mandar Pande",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
     "mongoose": "^5.10.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.3",
+    "rimraf": "^3.0.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }

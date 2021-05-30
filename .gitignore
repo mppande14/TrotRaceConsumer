@@ -74,3 +74,6 @@ typings/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/extensions.json
+
+# Output of Babel
+dist/
